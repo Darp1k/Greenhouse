@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PICTURES_URL = os.environ["PICTURES_URL"]
-SOURCE_DIR = "DroneCaptures/29.10.2026" 
+SOURCE_DIR = os.environ["DRONE_CAPTURE_DIR"]
 
 def upload_real_photos(directory_path: str, plant_id: int):
     """Scans a directory for real images and uploads them sequentially."""

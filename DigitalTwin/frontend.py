@@ -6,10 +6,13 @@ import numpy as np
 import json
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 # FastAPI Backend URL
-API_BASE_URL = os.environ["API_BASE"]
+API_BASE_URL = os.environ["API_BASE_URL"]
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
 
